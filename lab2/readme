@@ -1,0 +1,17 @@
+Question2
+Compiling: 
+mpic++ -Wall -o a.out nqueens.c
+mpirun -np <num processors> ./a.out <n>
+
+
+ Description: Program takes in the size of the board
+   as an n value, MPI is initialized and loops from 
+   rank to factorial(n) incrementing by size each iteration.
+   Inside the loop the i-th permutation of a sorted array of 
+   incrementing integers is calculated and a check is done 
+   to make sure that no 'queen' is on any diagonal. If any of 
+   the checks fail, then that iteration short-circuits and 
+   checks the next iteration. If the loop reaches the end, 
+   then the counter is incremented. The time of execution and 
+   number of solutions found are then output.
+ 
